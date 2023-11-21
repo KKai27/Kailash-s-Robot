@@ -1,0 +1,204 @@
+{
+  "waypoints": [
+    {
+      "anchorPoint": {
+        "x": 1.9208422070690316,
+        "y": 4.403159864012036
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 3.664763291065045,
+        "y": 4.672937711260038
+      },
+      "holonomicAngle": 0.0,
+      "isReversal": false,
+      "velOverride": null,
+      "isLocked": false,
+      "isStopPoint": false,
+      "stopEvent": {
+        "names": [
+          "Starting position"
+        ],
+        "executionBehavior": "parallel",
+        "waitBehavior": "none",
+        "waitTime": 0
+      }
+    },
+    {
+      "anchorPoint": {
+        "x": 6.227652839921066,
+        "y": 4.653667865028039
+      },
+      "prevControl": {
+        "x": 6.750618099635881,
+        "y": 4.52054943528245
+      },
+      "nextControl": {
+        "x": 5.704687580206251,
+        "y": 4.786786294773628
+      },
+      "holonomicAngle": 0,
+      "isReversal": false,
+      "velOverride": null,
+      "isLocked": false,
+      "isStopPoint": true,
+      "stopEvent": {
+        "names": [
+          "Getting game piece"
+        ],
+        "executionBehavior": "parallel",
+        "waitBehavior": "none",
+        "waitTime": 0
+      }
+    },
+    {
+      "anchorPoint": {
+        "x": 4.811319141869055,
+        "y": 4.701842480608039
+      },
+      "prevControl": {
+        "x": 5.29306529766906,
+        "y": 4.74038217307204
+      },
+      "nextControl": {
+        "x": 4.423981260089343,
+        "y": 4.670855450065662
+      },
+      "holonomicAngle": -90.0,
+      "isReversal": false,
+      "velOverride": null,
+      "isLocked": false,
+      "isStopPoint": false,
+      "stopEvent": {
+        "names": [],
+        "executionBehavior": "parallel",
+        "waitBehavior": "none",
+        "waitTime": 0
+      }
+    },
+    {
+      "anchorPoint": {
+        "x": 3.520239444325044,
+        "y": 4.672937711260038
+      },
+      "prevControl": {
+        "x": 3.972110352207193,
+        "y": 4.6815315037788485
+      },
+      "nextControl": {
+        "x": 3.068368536442895,
+        "y": 4.664343918741227
+      },
+      "holonomicAngle": -90.0,
+      "isReversal": false,
+      "velOverride": null,
+      "isLocked": false,
+      "isStopPoint": false,
+      "stopEvent": {
+        "names": [],
+        "executionBehavior": "parallel",
+        "waitBehavior": "none",
+        "waitTime": 0
+      }
+    },
+    {
+      "anchorPoint": {
+        "x": 2.0846359000410324,
+        "y": 4.672937711260038
+      },
+      "prevControl": {
+        "x": 2.4193143868161733,
+        "y": 4.589268089566251
+      },
+      "nextControl": {
+        "x": 1.7499574132658915,
+        "y": 4.756607332953824
+      },
+      "holonomicAngle": 180.0,
+      "isReversal": false,
+      "velOverride": null,
+      "isLocked": false,
+      "isStopPoint": true,
+      "stopEvent": {
+        "names": [
+          "Scoring game peice"
+        ],
+        "executionBehavior": "parallel",
+        "waitBehavior": "none",
+        "waitTime": 0
+      }
+    },
+    {
+      "anchorPoint": {
+        "x": 4.175414216213049,
+        "y": 4.663302788144039
+      },
+      "prevControl": {
+        "x": 3.1457493539434718,
+        "y": 4.676232829642931
+      },
+      "nextControl": {
+        "x": 5.205079078482626,
+        "y": 4.6503727466451465
+      },
+      "holonomicAngle": -90.0,
+      "isReversal": false,
+      "velOverride": null,
+      "isLocked": false,
+      "isStopPoint": false,
+      "stopEvent": {
+        "names": [],
+        "executionBehavior": "parallel",
+        "waitBehavior": "none",
+        "waitTime": 0
+      }
+    },
+    {
+      "anchorPoint": {
+        "x": 7.576542076161077,
+        "y": 4.7500170961880395
+      },
+      "prevControl": {
+        "x": 6.439621148473067,
+        "y": 4.711477403724039
+      },
+      "nextControl": null,
+      "holonomicAngle": 0,
+      "isReversal": false,
+      "velOverride": null,
+      "isLocked": false,
+      "isStopPoint": false,
+      "stopEvent": {
+        "names": [
+          "Stop by end of autonomous"
+        ],
+        "executionBehavior": "parallel",
+        "waitBehavior": "none",
+        "waitTime": 0
+      }
+    }
+  ],
+  "maxVelocity": 3.0,
+  "maxAcceleration": 3.0,
+  "isReversed": false,
+  "markers": [
+    {
+      "position": 0.0,
+      "names": [
+        "event"
+      ]
+    },
+    {
+      "position": 0.0,
+      "names": [
+        "event"
+      ]
+    },
+    {
+      "position": 0.0,
+      "names": [
+        "event"
+      ]
+    }
+  ]
+}

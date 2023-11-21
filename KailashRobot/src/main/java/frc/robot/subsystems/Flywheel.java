@@ -34,7 +34,7 @@ public class Flywheel extends SubsystemBase {
 
     @Override
     public void periodic() {
-        flywheelMotor1.setVoltage(flywheelController.calculate(flywheelEncoder.getPosition()) + feedforward.calculate(flywheelEncoder.getVelocity()));
+        flywheelMotor1.setVoltage(flywheelController.calculate(flywheelEncoder.getPosition()) + feedforward.calculate(ShooterConstants.kSparkMaxFeedforward));
     }
     
     @Override
