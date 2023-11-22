@@ -3,12 +3,14 @@ package frc.robot.subsystems;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants.ShooterConstants;
+
 import com.revrobotics.SparkMaxAbsoluteEncoder.Type;
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.controller.SimpleMotorFeedforward;
 
 import com.revrobotics.AbsoluteEncoder;
-import frc.robot.Constants.OperatorConstants.ShooterConstants;
+
 
 public class Flywheel extends SubsystemBase {
     private CANSparkMax flywheelMotor1;

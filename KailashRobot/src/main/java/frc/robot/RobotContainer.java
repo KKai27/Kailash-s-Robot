@@ -4,15 +4,16 @@
 
 package frc.robot;
 
-import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.Flywheel;
+import frc.robot.subsystems.Shooter;
 // import frc.robot.subsystems.Wheel;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import frc.robot.Constants.OperatorConstants;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -25,6 +26,7 @@ public class RobotContainer {
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   // private final Wheel m_Wheel = new Wheel();
   private final Flywheel m_Flywheel = new Flywheel();
+  private final Shooter m_Shooter = new Shooter();
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
@@ -49,6 +51,8 @@ public class RobotContainer {
     // m_driverController.a().whileTrue(new InstantCommand(() -> m_Wheel.moveForward())).whileFalse(new InstantCommand(() -> m_Wheel.stop()));
     // m_driverController.b().whileTrue(new InstantCommand(() -> m_Wheel.moveBackward())).whileFalse(new InstantCommand(() -> m_Wheel.stop()));
     m_driverController.a().onTrue(new InstantCommand(() -> m_Flywheel.setMotorSpeed(1000))).onFalse(new InstantCommand(() -> m_Flywheel.setMotorSpeed(0)));
+    m_driverController.x().onTrue(new InstantCommand(() -> m_Shooter.intakeSequence()));
+    m_driverController.y().onTrue(new InstantCommand(() -> m_Shooter.outtakeSequence()));
   }
 
   /**
