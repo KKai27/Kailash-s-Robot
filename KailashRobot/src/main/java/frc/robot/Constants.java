@@ -18,6 +18,7 @@ import edu.wpi.first.math.controller.ArmFeedforward;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+  
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
     public static final int kOperatorControllerPort = 1;
@@ -56,33 +57,13 @@ public final class Constants {
     public static final double kFlywheelVelocityConversionFactor = (2*Math.PI) * 1.0;
     public static final int kTopFlywheelMotorCurrentLimit = 30;
     public static final int kBottomFlywheelMotorCurrentLimit = 30;
-
-    //Preset Angles
-    public static final double kPivotHoldAngleDegrees = -40;
-
-    //Shooter Presets
-     //Shooter Presets
-     public static final ShooterPreset kIntakePreset = 
-     new ShooterPreset(115, -100);
-   public static final ShooterPreset kOuttakePreset = 
-     new ShooterPreset(90, 50);
-
-   public static final ShooterPreset kRetractPreset = 
-     new ShooterPreset(-95, 0);
-   public static final ShooterPreset kHoldPreset = 
-     new ShooterPreset(kPivotHoldAngleDegrees, 0);
-
-   public static final ShooterPreset kLaunchCubePreset = 
-     new ShooterPreset(45, 170);
-
-   public static final ShooterPreset kCloseHighCubePreset = 
-     new ShooterPreset(15, 70);
-   public static final ShooterPreset kFarHighCubePreset = 
-     new ShooterPreset(45, 0);
-
-   public static final ShooterPreset kCloseMiddleCubePreset = 
-     new ShooterPreset(20, 40);
-   public static final ShooterPreset kFarMiddleCubePreset = 
-     new ShooterPreset(45, 0);
  }
+
+  public static final class IntakeConstants {
+    public static final double kPivotGearRatio = 48.0 / 16;
+    public static final int kRollerCanId = 4;
+    public static final int kPivotRightCanId = 19;
+    public static final int kPivotLeftCanId = 1;
+  } 
+
 }

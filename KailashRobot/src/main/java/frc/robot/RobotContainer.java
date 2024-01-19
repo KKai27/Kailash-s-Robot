@@ -7,6 +7,7 @@ package frc.robot;
 import frc.robot.commands.Autos;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.Flywheel;
+import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Shooter;
 // import frc.robot.subsystems.Wheel;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -25,8 +26,9 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   // private final Wheel m_Wheel = new Wheel();
-  private final Flywheel m_Flywheel = new Flywheel();
-  private final Shooter m_Shooter = new Shooter();
+  // private final Flywheel m_Flywheel = new Flywheel();
+  // private final Shooter m_Shooter = new Shooter();
+  private final Intake m_Intake = new Intake();
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
@@ -47,12 +49,15 @@ public class RobotContainer {
    * PS4} controllers or {@link edu.wpi.first.wpilibj2.command.button.CommandJoystick Flight
    * joysticks}.
    */
+
   private void configureBindings() {
     // m_driverController.a().whileTrue(new InstantCommand(() -> m_Wheel.moveForward())).whileFalse(new InstantCommand(() -> m_Wheel.stop()));
     // m_driverController.b().whileTrue(new InstantCommand(() -> m_Wheel.moveBackward())).whileFalse(new InstantCommand(() -> m_Wheel.stop()));
-    m_driverController.a().onTrue(new InstantCommand(() -> m_Flywheel.setMotorSpeed(1000))).onFalse(new InstantCommand(() -> m_Flywheel.setMotorSpeed(0)));
-    m_driverController.x().onTrue(new InstantCommand(() -> m_Shooter.intakeSequence()));
-    m_driverController.y().onTrue(new InstantCommand(() -> m_Shooter.outtakeSequence()));
+    // m_driverController.a().onTrue(new InstantCommand(() -> m_Flywheel.setMotorSpeed(1000))).onFalse(new InstantCommand(() -> m_Flywheel.setMotorSpeed(0)));
+    m_driverController.leftBumper().onTrue(new InstantCommand(() -> m_Intake.setPivot(0)));
+    m_driverController.rightBumper().onTrue(new InstantCommand(() -> m_Intake.setPivot(0)));
+    m_driverController.a().onTrue(new InstantCommand(() -> m_Intake.intake())).onFalse(new InstantCommand(() -> m_Intake.stop()));
+    m_driverController.b().onTrue(new InstantCommand(() -> m_Intake.outtake())).onFalse(new InstantCommand(() -> m_Intake.stop()));
   }
 
   /**
